@@ -60,5 +60,10 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         }, 2000, 2000);
+
+        /* TODO :
+        Learn how to pause the timer thread when the user manually tries to scroll the
+        image front or back.
+        */
     }
 }
