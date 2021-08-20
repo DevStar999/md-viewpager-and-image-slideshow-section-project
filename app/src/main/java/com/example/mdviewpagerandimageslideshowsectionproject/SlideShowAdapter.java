@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +54,13 @@ public class SlideShowAdapter extends PagerAdapter {
         View view = layoutInflater.inflate(R.layout.slideshow_layout, container, false);
         ImageView imageView = view.findViewById(R.id.image_view);
         Glide.with(context).load(images.get(position)).into(imageView);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, (position+1) + " position image was clicked",
+                        Snackbar.LENGTH_SHORT).show();
+            }
+        });
         container.addView(view);
         return view;
     }
