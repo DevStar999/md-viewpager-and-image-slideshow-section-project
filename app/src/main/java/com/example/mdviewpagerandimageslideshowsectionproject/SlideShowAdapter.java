@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,7 +52,7 @@ public class SlideShowAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         View view = layoutInflater.inflate(R.layout.slideshow_layout, container, false);
         ImageView imageView = view.findViewById(R.id.image_view);
-        imageView.setImageResource(images.get(position));
+        Glide.with(context).load(images.get(position)).into(imageView);
         container.addView(view);
         return view;
     }
