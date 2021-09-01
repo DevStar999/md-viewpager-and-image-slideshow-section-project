@@ -57,7 +57,7 @@ public class SlideShowAdapter extends PagerAdapter {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(v, (position+1) + " position image was clicked",
+                Snackbar.make(v, (position + 1) + " position image was clicked",
                         Snackbar.LENGTH_SHORT).show();
             }
         });

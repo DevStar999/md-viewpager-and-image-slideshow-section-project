@@ -1,7 +1,6 @@
 package com.example.mdviewpagerandimageslideshowsectionproject;
 
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         viewPager.setCurrentItem(
-                                (viewPager.getCurrentItem()+1)%slideShowAdapter.getCount(),
+                                (viewPager.getCurrentItem() + 1) % slideShowAdapter.getCount(),
                                 true);
                     }
                 });
